@@ -23,7 +23,7 @@ var PLUGIN_INFO =
         switch(args.length){
             case 0:
                 model.getCurrentUser().addCallback(function(user){
-                    liberator.echo('Current user is '+ user);
+                    liberator.echo('Current user is ' + user);
                     args.bang && liberator.open(opt.url, liberator.CURRENT_TAB);
                 });
                 break;
@@ -31,13 +31,13 @@ var PLUGIN_INFO =
             case 1:
                 model.getPasswords().some(function(pw){
                     if(args[0] == pw.user){
-                        liberator.echo('Found');
+                        liberator.echo('User found');
                         model.login(pw.user, pw.password).addCallback(function(){
                             args.bang && liberator.open(opt.url, liberator.CURRENT_TAB);
                         });
                         return true;
                     }
-                }) || liberator.echo('Not found');
+                }) || liberator.echo('User not found');
                 break;
 
             case 2:
@@ -47,7 +47,7 @@ var PLUGIN_INFO =
                 break;
 
             default:
-                liberator.echo('Illegal args');
+                liberator.echoerr('Illegal args');
                 break;
         }
     }
