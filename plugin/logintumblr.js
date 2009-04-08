@@ -3,7 +3,7 @@ var PLUGIN_INFO =
 <name>{name}</name>
 <description>Tomblooのサービスを利用してtumblrとhatenaのアカウントを切り替えます</description>
 <minVersion>2.0pre</minVersion>
-<maxVersion>2.0pre</maxVersion>
+<maxVersion>2.0</maxVersion>
 <author homepage="http://d.hatena.ne.jp/zaknak/">zaknak</author>
 <require type="extension" id="tombloo@brasil.to">Tombloo</require>
 <version>0.1.3</version>
