@@ -1,7 +1,7 @@
 var PLUGIN_INFO =
 <VimperatorPlugin>
 <name>{name}</name>
-<description>Tombloo‚Åtumblr‚Épost‚·‚éApostæ‚Ìchannel_id‚ğw’è‰Â”\‚É‚µ‚Ü‚·</description>
+<description>Tomblooã§tumblrã«postã™ã‚‹æ™‚ã€postå…ˆã®channel_idã‚’æŒ‡å®šå¯èƒ½ã«ã—ã¾ã™</description>
 <minVersion>2.0</minVersion>
 <maxVersion>2.0</maxVersion>
 <author homepage="http://d.hatena.ne.jp/zaknak/">zaknak</author>
