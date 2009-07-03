@@ -5,7 +5,7 @@ var PLUGIN_INFO =
 <minVersion>2.0pre</minVersion>
 <maxVersion>2.0pre</maxVersion>
 <author homepage="http://d.hatena.ne.jp/zaknak/">zaknak</author>
-<version>0.1</version>
+<version>0.2</version>
 <detail><![CDATA[
 == Command ==
 :hateb[!]:
@@ -23,9 +23,11 @@ var PLUGIN_INFO =
         ['hateb','hb'],
         'open hatena bookmark entry page',
         function(args){
-            var prefixEntryUrl = 'http://b.hatena.ne.jp/entry/';
-            var url = buffer.URL;
+            var prefixEntryUrl = 'b.hatena.ne.jp/entry/';
             var prefixMetabUrl = [];
+
+            var uri = util.newURI(buffer.URL);
+            var url = (uri.schemeIs("https") ? "s/" :"") + uri.host + uri.path;
 
             if(args.count > 1){
                 for(i = 0; i < args.count; i++){
@@ -34,7 +36,7 @@ var PLUGIN_INFO =
                 prefixEntryUrl = prefixMetabUrl.join('');
             }
 
-            url = prefixEntryUrl + url.replace('#','%23');
+            url = 'http://' + prefixEntryUrl + url.replace('#','%23');
 
             if(args.bang){
                 liberator.open(url, liberator.CURRENT_TAB);
